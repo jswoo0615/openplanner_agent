@@ -1,6 +1,6 @@
 <!-- -->
 <launch>
-  <arg name="enable_openplanner_simulation" default=""/>
+  <arg name="enable_openplanner_simulation" default="false"/>
   <arg name="enable_object_insert" default="false"/>
   <arg name="kml_map_path" default=""/>
 
@@ -12,8 +12,8 @@
 	<arg name="samplingTipMargin" 		default="5"  /> 
 	<arg name="samplingOutMargin" 		default="15" /> 
 	<arg name="samplingSpeedFactor" 	default="1.0" />		
-	<arg name="enableHeadingSmoothing" 	default="true" />
-	<arg name="startFromFrontAxel" 		default="true" />
+	<arg name="enableHeadingSmoothing" 	default="false" />
+	<arg name="startFromFrontAxel" 		default="false" />
   <arg name="enableForwardSimulation"	default="true" />
 </include> 
 
@@ -26,11 +26,11 @@
 	<arg name="min_prediction_distance" 	default="10.0"/> 
 	<arg name="min_prediction_time" 		  default="2.0"/> 
 	<arg name="enableGenrateBranches" 		default="false"/>
-	<arg name="enableCurbObstacles" 		  default="true" />
+	<arg name="enableCurbObstacles" 		  default="false" />
 	<arg name="distanceBetweenCurbs" 		  default="1.5" />
 	<arg name="visualizationTime" 			  default="0.05" />
-	<arg name="enableStepByStepSignal" 		default="true" />
-	<arg name="enableParticleFilterPrediction" 	default="true" />
+	<arg name="enableStepByStepSignal" 		default="false" />
+	<arg name="enableParticleFilterPrediction" 	default="false" />
 		
 	<arg name="pose_weight_factor" 	default="0.2" />
 	<arg name="dir_weight_factor" 	default="0.2" />
@@ -54,9 +54,9 @@
 	<!-- all weights sum must equal 1 -->
 	<!-- ............................ -->
 	<arg name="weight_priority" 	default="0.2"/>
-	<arg name="weight_transition" 	default="0.0"/>
+	<arg name="weight_transition" 	default="0.2"/>
 	<arg name="weight_longitudinal" default="0.2"/>
-	<arg name="weight_lateral" 	default="0.4"/>
+	<arg name="weight_lateral" 	default="0.2"/>
 	<arg name="weight_lane_change" 	default="0.2"/>
 	<!-- ............................ -->
 	
@@ -69,8 +69,8 @@
   -->
 <include file="$(find op_local_planner)/launch/op_behavior_selector.launch">
 	<arg name="evidence_trust_number" 	default="3"/>
-	<arg name="use_sim_time" 		default="true"/>	
-	<arg name="show_driving_path" 		default="true"/>
+	<arg name="use_sim_time" 		default="false"/>	
+	<arg name="show_driving_path" 		default="false"/>
 </include> 
 
 
@@ -82,7 +82,7 @@
 <include file="$(find op_simulation_package)/launch/op_car_simulator_1.launch" >
   <arg name="id" 			default="1" />		
   <arg name="enableRvizPoseSelect"	default="false"/>	
-  <arg name="enableLooper"		default="true"   />	
+  <arg name="enableLooper"		default="false"   />	
   <arg name="meshPath" 			default="package://vehicle_description/mesh/default.dae" />
   <arg name="baseColorR"		default="0.9" />
   <arg name="baseColorG"		default="0.1" />
@@ -95,7 +95,7 @@
   <arg name="samplingTipMargin" 	default="5"  /> 
   <arg name="samplingOutMargin" 	default="15" /> 
   <arg name="samplingSpeedFactor" 	default="0.25" />
-  <arg name="enableHeadingSmoothing" 	default="true" />
+  <arg name="enableHeadingSmoothing" 	default="false" />
   <arg name="pathDensity" 		default="0.5" />
   <arg name="rollOutDensity" 		default="0.25" />
   <arg name="rollOutsNumber" 		default="8"    />
@@ -127,9 +127,9 @@
   <arg name="maxAcceleration" 		default="5"  />
   <arg name="maxDeceleration"		default="-5"  />
 	
-  <arg name="enableCurbObstacles" 	default="true" /> 
-  <arg name="enableObjectTracking" 	default="true" /> <!-- use internal kalman filter for track obstacles " -->
-  <arg name="enableOutsideControl" 	default="true" /> <!-- use internal kalman filter for track obstacles " -->		
+  <arg name="enableCurbObstacles" 	default="false" /> 
+  <arg name="enableObjectTracking" 	default="false" /> <!-- use internal kalman filter for track obstacles " -->
+  <arg name="enableOutsideControl" 	default="false" /> <!-- use internal kalman filter for track obstacles " -->		
 	
   <arg name="enableStepByStepSignal" 	default="true" />
   <arg name="enableSimulatedVelodyne" 	default="false" />  
