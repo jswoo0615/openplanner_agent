@@ -1,6 +1,6 @@
 <!-- -->
 <launch>  
-  <arg name="enable_openplanner_simulation" default="false"/>
+  <arg name="enable_openplanner_simulation" default="true"/>
   <arg name="enable_object_insert" default="false"/>
   <arg name="op_logs_experiment_folder_name" default="carla_complete_test"/>
   <arg name="kml_map_path" default="/home/${USER}/Desktop/Carla_Leaderboard_2_0/op_agent/autoware-contents/maps/vector_maps"/>

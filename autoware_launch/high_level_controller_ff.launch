@@ -37,7 +37,7 @@
 	<arg name="brakingPushRatio" 			default="1.0" /> <!-- push the velocity to decrease even when the velocity feedback signal from sensing is very small or delayed, contribute to final deceleration. where 1 predefined deceleration value is used -->
 	
 	<!-- These gains used for steer_mode = 1 -->
-	<arg name="steerTorqueGainKP" 			default="25.0"/>
+	<arg name="steerTorqueGainKP" 			default="21.5"/>
 	<arg name="steerTorqueGainKI" 			default="0.0"/>
 	<arg name="steerTorqueGainKD" 			default="40.0"/>
 	
