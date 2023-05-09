@@ -779,7 +779,7 @@ Visualization Manager:
             {}
           Queue Size: 100
           Value: true
-      Enabled: false
+      Enabled: true
       Name: Control
     - Class: rviz/Image
       Enabled: true
@@ -794,13 +794,13 @@ Visualization Manager:
       Unreliable: false
       Value: true
     - Class: rviz/MarkerArray
-      Enabled: false
+      Enabled: true
       Marker Topic: /carla_global_waypoints_rviz
       Name: MarkerArray
       Namespaces:
         {}
       Queue Size: 100
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0
